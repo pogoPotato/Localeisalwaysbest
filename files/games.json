@@ -8,6 +8,14 @@
     "Status": "Available"
   },
   {
+    "Name": "Raccoon Cafe",
+    "Description": "Raccoon Café is a cozy idle clicker game where you relax, click, and grow a charming café!",
+    "ExeName": "RaccoonCafe.exe",
+    "ImagePath": "images/space.png",
+    "DownloadUrl": "https://rijankoirala.com.np/games/RaccoonCafe.zip",
+    "Status": "Available"
+  },
+  {
     "Name": "LAKHE",
     "Description": "Explore the horror game based in Nepali theme!",
     "ExeName": "LAKHE.exe",
