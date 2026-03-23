@@ -4,185 +4,362 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Site Under Maintenance</title>
+<title>Rijan Koirala — Game Developer</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-body{
-height:100vh;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-overflow:hidden;
+body {
+    background: #0a0a0a;
+    color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* floating circles background */
+/* CURSOR */
+a, button { cursor: pointer; }
 
-.circle{
-position:absolute;
-border-radius:50%;
-background:rgba(255,255,255,0.05);
-animation:float 12s infinite linear;
+/* MAIN WRAP */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.circle:nth-child(1){
-width:200px;
-height:200px;
-left:10%;
-top:70%;
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid #1a1a1a;
 }
 
-.circle:nth-child(2){
-width:150px;
-height:150px;
-left:80%;
-top:20%;
-animation-duration:18s;
+.logo { font-weight: 600; }
+
+.nav a {
+    margin-left: 25px;
+    color: #888;
+    text-decoration: none;
 }
 
-.circle:nth-child(3){
-width:250px;
-height:250px;
-left:50%;
-top:90%;
-animation-duration:22s;
+.nav a:hover,
+.nav a.active { color: #fff; }
+
+/* PAGES */
+.page {
+    display: none;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    width: 100%;
 }
 
-@keyframes float{
-0%{transform:translateY(0px)}
-50%{transform:translateY(-40px)}
-100%{transform:translateY(0px)}
+.page.active { display: block; }
+
+/* HOME */
+.home {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/* main card */
+.home h1 { font-size: 3.2rem; }
 
-.container{
-text-align:center;
-padding:50px;
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-border-radius:20px;
-box-shadow:0 20px 50px rgba(0,0,0,0.5);
-max-width:600px;
-width:90%;
-animation:fadeIn 1.5s ease;
+.home p {
+    color: #aaa;
+    margin-top: 12px;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+/* ANIMATION */
+.fade {
+    animation: fadeIn 0.8s ease;
 }
 
-.icon{
-font-size:70px;
-margin-bottom:20px;
-color:#00e5ff;
-animation:spin 6s linear infinite;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes spin{
-0%{transform:rotate(0deg)}
-100%{transform:rotate(360deg)}
+/* GRID */
+.projects, .downloads {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-h1{
-font-size:40px;
-margin-bottom:10px;
+/* CARD */
+.card, .download-card {
+    padding: 22px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
 }
 
-p{
-opacity:0.8;
-margin-bottom:30px;
+.card:hover, .download-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,0.2);
 }
 
-.socials{
-margin-top:20px;
+.card h3 { color: #fff; }
+.card p { color: #aaa; font-size: 0.9rem; }
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 0.85rem;
 }
 
-.socials a{
-color:white;
-font-size:22px;
-margin:0 10px;
-transition:0.3s;
+/* DOWNLOAD */
+.download-card img {
+    width: 80px;
+    margin-bottom: 10px;
 }
 
-.socials a:hover{
-color:#00e5ff;
-transform:scale(1.3);
+.download-card button {
+    margin-top: 12px;
+    padding: 10px 18px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.button{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#00e5ff;
-color:black;
-border-radius:25px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+.download-card button:hover {
+    background: #fff;
+    color: #000;
 }
 
-.button:hover{
-background:white;
-transform:scale(1.05);
+/* CONTACT CARD */
+.contact-wrap {
+    display: flex;
+    justify-content: center;
 }
 
+.contact-card {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    background: #111;
+    border: 1px solid #333;
+    padding: 14px;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+textarea { min-height: 140px; }
+
+button {
+    padding: 12px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid #222;
+    padding: 20px;
+    text-align: center;
+    color: #777;
+    margin-top: auto;
+}
 </style>
 </head>
 
 <body>
 
-<div class="circle"></div>
-<div class="circle"></div>
-<div class="circle"></div>
+<div class="main">
 
-<div class="container">
-
-<div class="icon">
-<i class="fas fa-tools"></i>
+<div class="header">
+    <div class="logo">Rijan Koirala</div>
+    <div class="nav">
+        <a onclick="nav('home')" class="active">Home</a>
+        <a onclick="nav('projects')">Projects</a>
+        <a onclick="nav('downloads')">Downloads</a>
+        <a onclick="nav('contact')">Contact</a>
+    </div>
 </div>
 
-<h1>Website Under Maintenance</h1>
+<!-- HOME -->
+<div id="home" class="page active">
+    <div class="home fade">
+        <div>
+            <h1>Rijan Koirala</h1>
+            <p>Game Engine Developer & Systems Programmer</p>
+            <p>Founder — stupastudio.com</p>
+        </div>
+    </div>
+</div>
 
-<p>
-Rebuilding portfolio — new version coming soon.
-Please check back later.
-</p>
+<!-- PROJECTS -->
+<div id="projects" class="page">
+<h2>Projects</h2>
 
-<a href="#" class="button">
-<i class="fas fa-clock"></i> Coming Soon
-</a>
+<div class="projects">
 
-<div class="socials">
+<div class="card">
+<h3>Vulkan Engine (In Development)</h3>
+<p>Next-generation engine rewrite focused on performance, modern rendering pipeline, and scalability.</p>
+<a>Active Development</a>
+</div>
 
-<a href="https://github.com/pogoPotato"><i class="fab fa-github"></i></a>
-<a href="https://www.linkedin.com/in/rijan-koirala-2282ab2a3/"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.instagram.com/rizzan_n_n/"><i class="fab fa-instagram"></i></a>
+<div class="card">
+<h3>Custom OpenGL Engine</h3>
+<p>PBR rendering, ECS, animation, physics, audio, editor separation.</p>
+<a>Soon Open Source</a>
+</div>
 
+<div class="card">
+<h3>Stupa ECS</h3>
+<p>Custom ECS system designed for performance-focused engine architecture.</p>
+<a href="https://github.com/pogoPotato/StupaECS" target="_blank">GitHub</a>
+</div>
+
+<div class="card">
+<h3>Bind</h3>
+<p>C/C++ compile helper tool.</p>
+<a href="https://github.com/pogoPotato/BIND_COMPILE_HELPER" target="_blank">GitHub</a>
+</div>
+
+<div class="card">
+<h3>Raccoon Cafe</h3>
+<p>SDL-based game built from scratch.</p>
+<a href="https://github.com/pogoPotato/RaccoonCafe" target="_blank">GitHub</a>
+</div>
+
+<div class="card">
+<h3>VCT v1</h3>
+<p>Early version control system.</p>
+<a href="https://github.com/pogoPotato/VCT_v1" target="_blank">GitHub</a>
+</div>
+
+<div class="card">
+<h3>VCT v4</h3>
+<p>Advanced internal version control system.</p>
+<a>Private / In Use</a>
+</div>
+
+<div class="card">
+<h3>STUPA Launcher</h3>
+<p>Game launcher system.</p>
+<a onclick="nav('downloads')">Download</a>
+</div>
+
+<div class="card">
+<h3>STUPA LOGI</h3>
+<p>Logic simulator.</p>
+<a onclick="nav('downloads')">Download</a>
 </div>
 
 </div>
+</div>
+
+<!-- DOWNLOADS -->
+<div id="downloads" class="page">
+<h2>Downloads</h2>
+
+<div class="downloads">
+
+<div class="download-card">
+<img src="img/vtc.png">
+<p>VCT v1.0</p>
+<a href="files/VCT setup.exe" download><button>Download</button></a>
+</div>
+
+<div class="download-card">
+<img src="img/STUPA.png">
+<p>STUPA Launcher</p>
+<a href="files/StupaLauncherSetup.exe" download><button>Download</button></a>
+</div>
+
+<div class="download-card">
+<img src="img/LOGO.png">
+<p>LinKage (Testing)</p>
+<button disabled>Not Available</button>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+<div class="contact-wrap">
+<div class="card contact-card">
+<h2>Contact</h2>
+
+<form id="contact-form">
+<input type="text" id="name" placeholder="Name" required>
+<input type="email" id="email" placeholder="Email" required>
+<textarea id="message" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Rijan Koirala — rijankoirala26@gmail.com
+</div>
+
+<script>
+function nav(page){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById(page).classList.add('active');
+
+    document.querySelectorAll('.nav a').forEach(a=>a.classList.remove('active'));
+    event.target.classList.add('active');
+}
+
+emailjs.init("qOCLEp64oC5Zl84As");
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.send("service_z5h7lhb","template_wpxlrbg",{
+        user_name: name.value,
+        user_email: email.value,
+        message: message.value
+    }).then(()=>{
+        alert("Message sent");
+        this.reset();
+    });
+});
+</script>
 
 </body>
 </html>

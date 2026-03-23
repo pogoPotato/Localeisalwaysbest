@@ -1,0 +1,12 @@
+# VS Code
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment (if i add it later)
+.env
