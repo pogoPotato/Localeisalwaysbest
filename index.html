@@ -50,6 +50,9 @@ a, button { cursor: pointer; }
     color: #888;
     text-decoration: none;
 }
+.nav {
+    transition: 0.25s ease;
+}
 
 .nav a:hover,
 .nav a.active { color: #fff; }
@@ -195,6 +198,55 @@ button:hover {
     color: #777;
     margin-top: auto;
 }
+
+/* HAMBURGER */
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 12px;
+        padding: 15px;
+        flex-direction: column;
+        display: none;
+        width: 200px;
+    }
+
+    .nav a {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .home h1 {
+        font-size: 2.2rem;
+    }
+
+    .projects, .downloads {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -204,12 +256,17 @@ button:hover {
 
 <div class="header">
     <div class="logo">Rijan Koirala</div>
-    <div class="nav">
-        <a onclick="nav('home')" class="active">Home</a>
-        <a onclick="nav('projects')">Projects</a>
-        <a onclick="nav('downloads')">Downloads</a>
-        <a onclick="nav('resume')">Resume</a>
-        <a onclick="nav('contact')">Contact</a>
+
+    <div class="nav" id="nav">
+        <a onclick="navPage(event,'home')" class="active">Home</a>
+        <a onclick="navPage(event,'projects')">Projects</a>
+        <a onclick="navPage(event,'downloads')">Downloads</a>
+        <a onclick="navPage(event,'resume')">Resume</a>
+        <a onclick="navPage(event,'contact')">Contact</a>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="ri-menu-line"></i>
     </div>
 </div>
 
@@ -397,12 +454,18 @@ button:hover {
 </div>
 
 <script>
-function nav(page){
+function navPage(e, page){
     document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
     document.getElementById(page).classList.add('active');
 
     document.querySelectorAll('.nav a').forEach(a=>a.classList.remove('active'));
-    event.target.classList.add('active');
+    e.target.classList.add('active');
+
+    // close mobile menu after click
+    document.getElementById('nav').classList.remove('active');
+}
+function toggleMenu(){
+    document.getElementById('nav').classList.toggle('active');
 }
 
 emailjs.init("qOCLEp64oC5Zl84As");
