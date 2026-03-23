@@ -40,6 +40,8 @@ a, button { cursor: pointer; }
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
+    position: relative;
+    z-index: 1000;
     border-bottom: 1px solid #1a1a1a;
 }
 
@@ -52,6 +54,7 @@ a, button { cursor: pointer; }
 }
 .nav {
     transition: 0.25s ease;
+    z-index: 1100;
 }
 
 .nav a:hover,
@@ -130,6 +133,20 @@ a, button { cursor: pointer; }
 .download-card img {
     width: 80px;
     margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.projects,
+.downloads {
+    margin-top: 20px;
+}
+
+.page {
+    padding: 80px 20px; /* was 60px */
 }
 
 .download-card button {
@@ -228,6 +245,8 @@ button:hover {
         flex-direction: column;
         display: none;
         width: 200px;
+
+        z-index: 2000;
     }
 
     .nav a {
