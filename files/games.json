@@ -16,10 +16,10 @@
     "Status": "Available"
   },
   {
-    "Name": "LAKHE",
-    "Description": "Explore the horror game based in Nepali theme!",
-    "ExeName": "LAKHE.exe",
-    "ImagePath": "images/space.png",
+    "Name": "PROJECT R",
+    "Description": "Explore the Story Driven Horror Game!",
+    "ExeName": "ProjectR.exe",
+    "ImagePath": "images/ProjectRLogo.png",
     "DownloadUrl": "https://rijankoirala.com.np/games/FREETHEM.zip",
     "Status": "Upcoming"
   }
