@@ -3,24 +3,27 @@
     "Name": "Zombie Apocalypse Survival - TEST",
     "Description": "Survive waves of zombies in this thrilling game!",
     "ExeName": "Zombie Apocalypse Survival.exe",
-    "ImagePath": "images/zombie.png",
+    "ImageUrl": "https://rijankoirala.com.np/images/zombie.png",
     "DownloadUrl": "https://rijankoirala.com.np/games/ZombieApocalypseSurvival.zip",
+    "Size": "1.2 GB",
     "Status": "Available"
   },
   {
     "Name": "Raccoon Cafe",
     "Description": "Raccoon Café is a cozy idle clicker game where you relax, click, and grow a charming café!",
     "ExeName": "RaccoonCafe.exe",
-    "ImagePath": "images/space.png",
+    "ImageUrl": "https://rijankoirala.com.np/images/space.png",
     "DownloadUrl": "https://rijankoirala.com.np/games/RaccoonCafe.zip",
+    "Size": "800 MB",
     "Status": "Available"
   },
   {
     "Name": "PROJECT R",
     "Description": "Explore the Story Driven Horror Game!",
     "ExeName": "ProjectR.exe",
-    "ImagePath": "images/ProjectRLogo.png",
+    "ImageUrl": "https://rijankoirala.com.np/images/ProjectRLogo.png",
     "DownloadUrl": "https://rijankoirala.com.np/games/FREETHEM.zip",
+    "Size": "2.1 GB",
     "Status": "Upcoming"
   }
 ]
