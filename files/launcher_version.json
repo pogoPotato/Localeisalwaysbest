@@ -1,4 +1,6 @@
 {
   "latestVersion": "1.3.0",
-  "downloadUrl": "https://rijankoirala.com.np/files/StupaLauncherSetup.exe"
+  "downloadUrl": "https://rijankoirala.com.np/files/StupaLauncherSetup.exe",
+  "sha256": "be6427d65272534413353af4e837fdbd4543ba7dc2aec201eb4520b86e1ba8ee",
+  "changelog": "Fixed friend requests not delivering when sent by Gamer Tag/Friend Code. Added EULA & per-account licensing, background tray notifications, crash reporting, and optional Discord Rich Presence."
 }
