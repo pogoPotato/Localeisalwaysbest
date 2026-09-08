@@ -64,7 +64,7 @@ export const projects = [
   {
     name: "STUPA Launcher",
     category: "apps",
-    status: "v1.2.0",
+    status: "v1.3.0",
     desc: "Desktop launcher for installing and updating Stupa Studio games. Actually stable, which worries me.",
     tags: ["Windows"],
     link: { page: "downloads", label: "Download" },
@@ -115,7 +115,7 @@ export const projects = [
 export const downloads = [
   {
     name: "STUPA Launcher",
-    meta: "v1.2.0 · Windows",
+    meta: "v1.3.0 · Windows",
     img: "/img/STUPA.png",
     href: "/files/StupaLauncherSetup.exe",
   },
