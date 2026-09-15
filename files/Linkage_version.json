@@ -1,6 +1,6 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "apkUrl": "https://raw.githubusercontent.com/pogoPotato/Localeisalwaysbest/main/files/Linkage.apk",
-  "notes": "Video calls: call anyone from a chat with the new camera button. Also fixes scrolling back through older messages jumping you to the newest one.",
+  "notes": "Group video calls and screen sharing. Tap the camera button in any chat to start a video call; during one you can share your screen. Also fixes older messages jumping you back to the newest one.",
   "mandatory": false
 }
