@@ -1,3 +1,10 @@
+import { versions } from "./generated/versions.js";
+
+// Version strings come from files/*_version.json via scripts/sync-static.mjs,
+// regenerated on every build. Typing them here is what let the projects list
+// say Linkage v1.2.0 while the downloads list said v1.4.0 and the published
+// APK was 1.5.0 — three answers to one question, all of them on the page.
+
 // Category colors follow a 3D viewport's axis-gizmo convention (X/Y/Z = red/green/blue),
 // plus lime for whatever's actively on fire — same meaning an engine debug HUD gives it.
 export const categories = {
@@ -80,7 +87,7 @@ export const projects = [
   {
     name: "STUPA Launcher",
     category: "apps",
-    status: "v1.3.1",
+    status: `v${versions.launcher}`,
     desc: "Desktop launcher for installing and updating Stupa Studio games. Actually stable, which worries me.",
     tags: ["Windows"],
     link: { page: "downloads", label: "Download" },
@@ -88,7 +95,7 @@ export const projects = [
   {
     name: "Linkage",
     category: "apps",
-    status: "v1.2.0",
+    status: `v${versions.linkage}`,
     desc: "Android app, built and maintained under Stupa Studio. Ships more reliably than I sleep.",
     tags: ["Android"],
     link: { page: "downloads", label: "Download" },
@@ -134,13 +141,13 @@ export const projects = [
 export const downloads = [
   {
     name: "STUPA Launcher",
-    meta: "v1.3.1 · Windows",
+    meta: `v${versions.launcher} · Windows`,
     img: "/img/STUPA.png",
     href: "/files/StupaLauncherSetup.exe",
   },
   {
     name: "Linkage",
-    meta: "v1.4.0 · Android APK",
+    meta: `v${versions.linkage} · Android APK`,
     img: "/img/LinkageLogo.png",
     href: "/files/Linkage.apk",
   },
