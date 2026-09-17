@@ -8,14 +8,24 @@ export const categories = {
 };
 
 export const stack = {
-  Languages: ["C", "C++", "Python", "JavaScript", "Node.js", "React", "C#", "XAML"],
+  Languages: [
+    "C",
+    "C++",
+    "Python",
+    "JavaScript",
+    "Node.js",
+    "React",
+    "C#",
+    "XAML",
+  ],
   "Graphics APIs": ["OpenGL", "Vulkan", "DirectX"],
   "Tools & Systems": ["Version control", "CI/CD"],
 };
 
 export const now = "Building Project R (send help)";
 
-export const tagline = "Systems programmer and game engine developer. Running on caffeine, nicotine, and spite.";
+export const tagline =
+  "Systems programmer and game engine developer. Running on caffeine, nicotine, and spite.";
 
 export const ticker = [
   "compiles on my machine",
@@ -34,7 +44,10 @@ export const projects = [
     status: "Open source",
     desc: "Where I actually learned graphics programming. Public, messy in places, and proud of it.",
     tags: ["OpenGL", "C++"],
-    link: { href: "https://github.com/pogoPotato/StupaEngineGL", label: "GitHub" },
+    link: {
+      href: "https://github.com/pogoPotato/StupaEngineGL",
+      label: "GitHub",
+    },
   },
   {
     name: "Stupa Engine",
@@ -59,7 +72,10 @@ export const projects = [
     status: "Shipped",
     desc: "A compile helper for C/C++ so I stop retyping the same flags at 3am.",
     tags: ["C++"],
-    link: { href: "https://github.com/pogoPotato/BIND_COMPILE_HELPER", label: "GitHub" },
+    link: {
+      href: "https://github.com/pogoPotato/BIND_COMPILE_HELPER",
+      label: "GitHub",
+    },
   },
   {
     name: "STUPA Launcher",
@@ -100,7 +116,10 @@ export const projects = [
     status: "Shipped",
     desc: "A cozy idle-clicker, built with SDL. Softer than everything else on this page.",
     tags: ["SDL"],
-    link: { href: "https://github.com/pogoPotato/RaccoonCafe", label: "GitHub" },
+    link: {
+      href: "https://github.com/pogoPotato/RaccoonCafe",
+      label: "GitHub",
+    },
   },
   {
     name: "Zombie Apocalypse Survival",
@@ -121,7 +140,7 @@ export const downloads = [
   },
   {
     name: "Linkage",
-    meta: "v1.2.0 · Android APK",
+    meta: "v1.4.0 · Android APK",
     img: "/img/LinkageLogo.png",
     href: "/files/Linkage.apk",
   },
@@ -141,8 +160,14 @@ export const downloads = [
 
 export const resume = {
   education: [
-    { title: "Yamanashi Gakuin University — Data Science", meta: "2024 – Present, Yamanashi, Japan" },
-    { title: "Everest Secondary School", meta: "2021 – 2023, Biratnagar, Nepal" },
+    {
+      title: "Yamanashi Gakuin University — Data Science",
+      meta: "2024 – Present, Yamanashi, Japan",
+    },
+    {
+      title: "Everest Secondary School",
+      meta: "2021 – 2023, Biratnagar, Nepal",
+    },
   ],
   keyWork: [
     "Stupa Engine",
