@@ -1,5 +1,5 @@
 {
-  "version": "1.5.2",
+  "version": "1.5.3",
   "apkUrl": "https://raw.githubusercontent.com/pogoPotato/Localeisalwaysbest/main/files/Linkage.apk",
   "notes": "Group video calls and screen sharing. Tap the camera button in any chat to start a video call; during one you can share your screen. Also fixes older messages jumping you back to the newest one.",
   "mandatory": false
