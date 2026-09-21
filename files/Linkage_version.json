@@ -1,6 +1,6 @@
 {
-  "version": "1.5.3",
+  "version": "1.5.7",
   "apkUrl": "https://raw.githubusercontent.com/pogoPotato/Localeisalwaysbest/main/files/Linkage.apk",
-  "notes": "Group video calls and screen sharing. Tap the camera button in any chat to start a video call; during one you can share your screen. Also fixes older messages jumping you back to the newest one.",
+  "notes": "Calls are fixed. Incoming calls now ring properly, and answering one actually connects instead of sitting on \"Connecting\". If a group call is already running you join it instead of starting a second one, and you can move a call between your phone and your computer with the green Join bar. The call screen now fits any screen size, with your own video as a small tile you can drag out of the way. Also fixes voice messages, file uploads and screen sharing in the browser.",
   "mandatory": false
 }
