@@ -2,6 +2,7 @@
     deploy.ps1 - one-shot build + ship for rijankoirala.com.np
 
     Usage:  ./deploy.ps1   (or just  ./deploy  via the deploy.cmd wrapper)
+            ./deploy.ps1 -Message "Linkage 1.6.0"   (no prompt; for scripts)
 
     What it does, in order:
       1. Builds the site (web/) and fails fast if the build is broken -
@@ -12,6 +13,8 @@
       5. Watches the GitHub Actions deploy run and tells you pass/fail,
          instead of you having to go check the Actions tab yourself.
 #>
+
+param([string]$Message)
 
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
@@ -39,7 +42,7 @@ Write-Host "==> Changes to be committed:" -ForegroundColor Cyan
 git status --short
 Write-Host ""
 
-$commitMessage = Read-Host "Commit message (Enter for a timestamped default)"
+$commitMessage = if ($Message) { $Message } else { Read-Host "Commit message (Enter for a timestamped default)" }
 if ([string]::IsNullOrWhiteSpace($commitMessage)) {
     $commitMessage = "Update site $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
 }

@@ -1,6 +1,6 @@
 {
-  "version": "1.5.7",
+  "version": "1.6.0",
   "apkUrl": "https://raw.githubusercontent.com/pogoPotato/Localeisalwaysbest/main/files/Linkage.apk",
-  "notes": "Calls are fixed. Incoming calls now ring properly, and answering one actually connects instead of sitting on \"Connecting\". If a group call is already running you join it instead of starting a second one, and you can move a call between your phone and your computer with the green Join bar. The call screen now fits any screen size, with your own video as a small tile you can drag out of the way. Also fixes voice messages, file uploads and screen sharing in the browser.",
+  "notes": "Fixes the \"Call in progress / Join\" bar that kept showing up everywhere: it now only appears when you are really on a call on another device, and calls a dead phone left open are closed automatically. Moving a call between your phone and computer no longer hangs up on the other person. New: Continue with Stupa. Sign in with your Stupa Account, or connect your existing Linkage account from Settings.",
   "mandatory": false
 }
